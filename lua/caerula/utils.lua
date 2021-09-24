@@ -1,9 +1,9 @@
 local utils = {}
 
 local function highlight(group, color)
-    local gui = color.gui and "gui=" .. color.gui or "gui=NONE"
-    local fg = color.fg and "guifg=" .. color.fg or "guifg=NONE"
-    local bg = color.bg and "guibg=" .. color.bg or "guibg=NONE"
+    local gui = color.gui and "gui="   .. color.gui or "gui=NONE"
+    local fg  = color.fg  and "guifg=" .. color.fg  or "guifg=NONE"
+    local bg  = color.bg  and "guibg=" .. color.bg  or "guibg=NONE"
 
     local hi = "hi " .. group .. " " .. gui.. " " .. fg .. " " .. bg .. " "
     vim.cmd(hi)
@@ -23,7 +23,7 @@ function utils.set_theme(theme)
     end
 
     vim.o.termguicolors = true
-    vim.g.colors_name = "protottype"
+    vim.g.colors_name = "caerula"
 
     -- render base theme
     render(theme.base)
